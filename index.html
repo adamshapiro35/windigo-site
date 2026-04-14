@@ -8,35 +8,43 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #001a0d; /* Deep Institutional Green */
             height: 100vh;
             display: flex;
-            flex-direction: column; /* Stacks logo and email vertically */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             overflow: hidden;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            
+            /* The Imposing Background Photo */
+            background: linear-gradient(rgba(0, 15, 7, 0.8), rgba(0, 15, 7, 0.8)), url('tremblant.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         img {
-            max-width: 60%; /* Slightly smaller to make room for text */
+            max-width: 60%;
             height: auto;
-            margin-bottom: 30px; /* Space between logo and email */
+            margin-bottom: 30px;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6)); /* "Anchor" the logo to the mountain */
         }
         a {
-            color: rgba(255, 255, 255, 0.8); /* Subtle white */
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            font-size: 18px;
-            letter-spacing: 1px;
+            font-size: 16px;
+            letter-spacing: 2px;
             font-weight: 300;
-            transition: color 0.3s ease;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
         }
         a:hover {
-            color: #ffffff; /* Brightens on hover */
+            color: #ffffff;
+            letter-spacing: 3px;
         }
     </style>
 </head>
 <body>
     <img src="logo.png" alt="Windigo Capital">
-    <a href="mailto:info@windigocapital.com">info@windigocapital.com</a>
+    <a href="mailto:info@windigocapital.com">Contact Institutional Inquiries</a>
 </body>
 </html>
