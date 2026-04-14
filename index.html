@@ -7,20 +7,36 @@
     <style>
         body {
             margin: 0;
+            padding: 0;
             background-color: #001a0d; /* Deep Institutional Green */
             height: 100vh;
             display: flex;
+            flex-direction: column; /* Stacks logo and email vertically */
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         img {
-            max-width: 70%; /* Keeps it elegant, not overwhelming */
+            max-width: 60%; /* Slightly smaller to make room for text */
             height: auto;
+            margin-bottom: 30px; /* Space between logo and email */
+        }
+        a {
+            color: rgba(255, 255, 255, 0.8); /* Subtle white */
+            text-decoration: none;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ffffff; /* Brightens on hover */
         }
     </style>
 </head>
 <body>
     <img src="logo.png" alt="Windigo Capital">
+    <a href="mailto:info@windigocapital.com">info@windigocapital.com</a>
 </body>
 </html>
