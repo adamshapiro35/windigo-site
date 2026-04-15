@@ -16,42 +16,60 @@
             overflow: hidden;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             
-            /* Background: Brighter overlay (changed from 0.8 to 0.45 for transparency) */
+            /* Background Image */
             background: linear-gradient(rgba(0, 15, 7, 0.45), rgba(0, 15, 7, 0.45)), url('tremblant.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-        
-        /* Logo: Shrinking the surround by making the logo smaller relative to the screen (changed from 60% to 45%) */
-        img {
-            max-width: 45%; 
-            height: auto;
-            margin-bottom: 30px; 
-            /* Subtle shadow to keep the logo sharp and 'floating' against the brighter background */
-            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+
+        /* The Logo Container: This forces the symmetry */
+        .logo-container {
+            width: 450px;      /* Set a fixed width */
+            height: 180px;     /* Set a fixed height for a sleek landscape box */
+            overflow: hidden;  /* Hide the excess white from the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white; /* This creates the clean, symmetric white box */
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
-        
+
+        .logo-container img {
+            width: 110%;       /* Slightly zoom in to cut off the original white edges */
+            height: auto;
+        }
+
         a {
-            color: rgba(255, 255, 255, 0.95); /* Nearly pure white for visibility */
+            color: rgba(255, 255, 255, 0.95);
             text-decoration: none;
-            font-size: 16px;
-            letter-spacing: 2px;
+            font-size: 14px;
+            letter-spacing: 3px;
             font-weight: 300;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            /* Text shadow to ensure visibility on the more transparent background */
             text-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }
-        
+
         a:hover {
             color: #ffffff;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
+        }
+        
+        /* Ensures it looks good on iPhone */
+        @media (max-width: 600px) {
+            .logo-container {
+                width: 85%;
+                height: 120px;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="logo.png" alt="Windigo Capital">
+    <div class="logo-container">
+        <img src="logo.png" alt="Windigo Capital">
+    </div>
     <a href="mailto:info@windigocapital.com">Contact</a>
 </body>
 </html>
