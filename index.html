@@ -28,15 +28,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 10vh; /* Keeps the overall group anchored at the 40% mark */
+            /* Anchors the bottom of this group to the mountain's base */
+            margin-top: 15vh; 
             width: 100%;
         }
 
         img {
             max-width: 50%;
             height: auto;
-            /* LOWERING THE LOGO: Increased from 40px to 80px to push the logo down toward the link */
-            margin-bottom: 80px; 
+            /* REDUCING SPACE: This "drops" the logo down toward the Contact link */
+            margin-bottom: 20px; 
             filter: drop-shadow(0 10px 20px rgba(0,0,0,0.8));
         }
 
@@ -59,10 +60,7 @@
         @media (max-width: 600px) {
             img {
                 max-width: 80%;
-                margin-bottom: 60px;
-            }
-            .content-wrapper {
-                margin-top: 5vh;
+                margin-bottom: 15px;
             }
         }
     </style>
