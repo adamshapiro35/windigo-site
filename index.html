@@ -16,69 +16,35 @@
             overflow: hidden;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             
-            /* Background Image */
-            background: linear-gradient(rgba(0, 15, 7, 0.3), rgba(0, 15, 7, 0.3)), url('tremblant.jpg');
+            /* The Imposing Background Photo */
+            background: linear-gradient(rgba(0, 15, 7, 0.8), rgba(0, 15, 7, 0.8)), url('tremblant.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-
-        /* The Frosted Glass Container */
-        .logo-container {
-            width: 450px;
-            height: 160px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            /* Glassmorphism Effect */
-            background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
-            backdrop-filter: blur(12px);            /* The "Frost" blur */
-            -webkit-backdrop-filter: blur(12px);    /* Safari support */
-            border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle glass edge */
-            border-radius: 4px;                     /* Sharp, institutional corners */
-            
-            margin-bottom: 40px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
-
-        /* This handles the logo with the green background */
-        .logo-container img {
-            width: 100%; 
+        img {
+            max-width: 60%;
             height: auto;
-            mix-blend-mode: normal; 
+            margin-bottom: 30px;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6)); /* "Anchor" the logo to the mountain */
         }
-
         a {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            font-size: 13px;
-            letter-spacing: 4px;
+            font-size: 16px;
+            letter-spacing: 2px;
             font-weight: 300;
             text-transform: uppercase;
-            transition: all 0.4s ease;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
         }
-
         a:hover {
             color: #ffffff;
-            letter-spacing: 6px;
-            text-shadow: 0 0 15px rgba(255,255,255,0.4);
-        }
-        
-        @media (max-width: 600px) {
-            .logo-container {
-                width: 85%;
-                height: 110px;
-            }
+            letter-spacing: 3px;
         }
     </style>
 </head>
 <body>
-    <div class="logo-container">
-        <img src="logo.png" alt="Windigo Capital">
-    </div>
-    <a href="mailto:info@windigocapital.com">Contact</a>
+    <img src="logo.png" alt="Windigo Capital">
+    <a href="mailto:info@windigocapital.com">Contact Institutional Inquiries</a>
 </body>
 </html>
